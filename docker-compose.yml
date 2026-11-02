@@ -1,0 +1,14 @@
+services:
+  qwenwork2api:
+    build: .
+    container_name: qwenwork2api
+    restart: unless-stopped
+    ports:
+      - "8796:8796"
+    environment:
+      - PORT=8796
+      - QWENWORK_API_KEY=${QWENWORK_API_KEY:-}
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY:-}
+    env_file:
+      - path: .env
+        required: false

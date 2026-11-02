@@ -1,0 +1,10 @@
+# QwenWork2API 核心基于 Python 3 标准库，无需安装任何额外依赖即可运行！
+# 本文件列出推荐的可选开发与增强库：
+# pip install -r requirements.txt
+
+# 可选：高级环境变量解析支持
+python-dotenv>=1.0.0
+
+# 可选：用于运行测试脚本与探针
+requests>=2.31.0
+pytest>=8.0.0
