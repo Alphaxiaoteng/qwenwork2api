@@ -15,6 +15,14 @@
 
 ---
 
+## ⚠️ 免责声明 (Disclaimer)
+
+1. **个人学习与研究使用**：本项目仅供个人技术研究、接口兼容性调试与学习交流使用，**严禁用于任何商业营利、非法用途或大规模生产环境**。
+2. **版权与商标归属**：本项目涉及的“千问办公”、“通义千问”、“Qwen”等商标、���称及服务版权归其官方所有（阿里巴巴 / 阿里云计算有限公司）。本项目仅为本地格式转换与兼容适配中间件，不对官方服务的稳定性、可用性及数据安全性作任何明示或暗示的保证。
+3. **服务条款遵从**：使用者在调用相关接口与服务时，必须严格遵守原服务商的用户协议与服务条款（Terms of Service）。若因使用者自身的不当调用或超额请求引发账号风控、限制或法律纠纷，均由使用者本人独立承担，本项目作者概不负责。
+
+---
+
 <a name="中文说明"></a>
 ## 💡 为什么需要 QwenWork2API？
 
@@ -189,6 +197,12 @@ curl -N http://127.0.0.1:8796/v1/chat/completions \
 ## 🌐 English Overview
 
 **QwenWork2API** turns Alibaba QwenWork / DashScope into a 100% OpenAI-compatible 2API proxy.
+
+### ⚠️ Disclaimer
+
+1. **Personal & Educational Use Only**: This project is strictly intended for personal learning, interface compatibility testing, and research purposes. **Any commercial use, illegal activities, or large-scale production deployments are strictly prohibited.**
+2. **Trademarks & Copyrights**: All trademarks, brand names, and copyrights (including "QwenWork", "Tongyi Qwen", and "Alibaba") belong to their respective owners (Alibaba Group / Alibaba Cloud). This tool acts solely as a local protocol bridge/adapter and is not officially affiliated with or endorsed by Alibaba.
+3. **Compliance with Terms of Service**: Users must strictly comply with the Terms of Service of the respective platforms. The authors assume no liability for any account suspensions, disputes, or damages resulting from the use of this project.
 
 ### Features
 - **Zero Heavy Dependencies**: Built with Python 3 standard library (`http.server`, `urllib`).

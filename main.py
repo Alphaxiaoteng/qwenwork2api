@@ -2,7 +2,12 @@
 """
 QwenWork2API: 将阿里“千问办公”（QwenWork / 通义千问）能力封装为 100% 兼容 OpenAI 格式的高性能 2API 代理服务。
 
-功能特性:
+【免责声明 / Disclaimer】
+  1. 本项目仅供个人学习、技术研究与接口兼容性测试使用，严禁用于商业用途、非法用途或生产环境。
+  2. 相关商标及底层服务版权均归阿里巴巴 / 阿里云官方所有。
+  3. 使用者须严格遵守原服务商用户协议与服务条款，违规使用后果自负。
+
+功能特���:
   - 100% OpenAI 接口规范 (GET /v1/models, POST /v1/chat/completions)
   - 支持真流式 Server-Sent Events (SSE) 输出与自动心跳保活
   - 支持原生 Function Calling (Tool Calls) 工具调用透传
