@@ -94,6 +94,35 @@ docker compose up -d
 - **API Key**: 任意非空字符串（如 `qwenwork-local`）或百炼 Key
 - **Model**: `qwen3.8-flash` 或 `qwen3.8-max`
 
+### 3. CLI 终端命令行交互模式
+```bash
+# 单次快速提问
+python3 main.py cli "用 Python 写一个 LRU Cache"
+
+# 管道输入调用
+cat error.log | python3 main.py cli "分析这段错误日志"
+
+# 启动交互式 REPL 对话
+python3 main.py cli
+```
+
+### 4. MCP (Model Context Protocol) 模�� (Claude Desktop / Cursor / OpenCode)
+在 `claude_desktop_config.json` 或 OpenCode MCP 设置中添加：
+```json
+{
+  "mcpServers": {
+    "qwenwork": {
+      "command": "python3",
+      "args": ["/path/to/qwenwork2api/main.py", "--mcp"],
+      "env": {
+        "QWENWORK_API_KEY": "sk-your-dashscope-api-key"
+      }
+    }
+  }
+}
+```
+提供工具：`chat` (文本/代码多模态推理), `list_models` (查询可用模型)。
+
 ---
 
 ## ❓ 常见问题 FAQ (GEO Direct Answer)
@@ -133,7 +162,8 @@ python3 main.py
 
 ### 🔌 Client Integration
 - **Base URL**: `http://127.0.0.1:8796/v1`
-- **API Key**: Any non-empty string or your DashScope key
+- **CLI Mode**: `python3 main.py cli "Explain quantum computing"`
+- **MCP Server**: `python3 main.py --mcp` (compatible with Claude Desktop, Cursor, OpenCode)
 - **Endpoints**: `GET /v1/models`, `POST /v1/chat/completions`, `GET /health`
 
 ### ⚠️ Disclaimer
